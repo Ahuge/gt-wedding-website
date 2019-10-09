@@ -21,6 +21,9 @@ _See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo. Use invite
 4. That's it, open `index.html` on your browser by just double-clicking on the file.
 
 # Documentation
+You can follow this [article](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) to setup your Google sheet
+for rsvp feature.
+
 I have written a 
 [blog post describing all the features of this wedding website](https://blog.rampatra.com/wedding-website) and how to
 customize each of them according to your needs.
