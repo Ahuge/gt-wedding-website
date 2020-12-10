@@ -24,7 +24,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "pwa-asset-generator": "^3.2.2",
+    "pwa-asset-generator": "^4.0.1",
     "uglify-js": "^3.11.2"
   },
   "dependencies": {
