@@ -5,7 +5,7 @@
   "main": "npmfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pwa": "pwa-asset-generator img/logo.png ./pwa_assets -i ./index.html -m ./manifest.json --dark-mode --background dimgrey"
+    "pwa": "pwa-asset-generator img/logo.png ./pwa_assets -i ./index.html -m ./manifest.json --favicon --dark-mode --background dimgrey"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "pwa-asset-generator": "^4.0.1",
     "uglify-js": "^3.11.2"
@@ -30,6 +30,8 @@
   "dependencies": {
     "animate.css": "^4.1.0",
     "font-awesome": "^4.7.0",
+    "graceful-fs": "^4.2.4",
+    "node-sass": "^6.0.1",
     "waypoints": "^4.0.1"
   }
 }

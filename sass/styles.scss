@@ -326,7 +326,7 @@ Hero
 }
 .fixed {
   position: fixed;
-  background-color: rgba(55, 36, 40, .88);
+  background-color: rgba(13, 24, 7, 88%);
   z-index: 999;
   width: 100%;
 }
@@ -779,6 +779,9 @@ Embed video
 }
 #video-content p {
   color: #ffffff !important;
+}
+#video-content-span p {
+  color: #cccccc;
 }
 
 /* ==========================================================================
