@@ -167,8 +167,9 @@ $(document).ready(function () {
 
     /********************** Toggle Map Content **********************/
     $('#btn-show-map').click(function () {
-        $('#map-content').toggleClass('toggle-map-content');
-        $('#btn-show-content').toggleClass('toggle-map-content');
+	$('#mapBackground').trigger( "click" );
+        // $('#map-content').toggleClass('toggle-map-content');
+        // $('#btn-show-content').toggleClass('toggle-map-content');
     });
     $('#btn-show-content').click(function () {
         $('#map-content').toggleClass('toggle-map-content');

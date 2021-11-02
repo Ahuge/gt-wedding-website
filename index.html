@@ -144,8 +144,8 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="hero-content text-center">
-                        <img src="img/logo-lg.png">
-                        <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
+                        
+			<span class="title-text">Kirsten &amp; Alex</span>
                     </div>
                 </div>
             </div>
@@ -340,7 +340,17 @@
             <h3 data-translatable="">How do I get there?</h3>
             <p data-translatable="">It's way easier than you think!</p>
         </div>
-        <div id="map-canvas"></div>
+	<div id="map-manual">
+		<iframe id="mapBackground" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2597.9638238485154!2d-123.10102768413297!3d49.37175747237576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54866f851af112d7%3A0xc4e64d7162e0ecb7!2sGrouse%20Mountain%20%40%20Skyride!5e0!3m2!1sen!2sca!4v1635393658091!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+	<div id="mapModal" class="modal">
+        	<div id="map-modal-bg" class="modal-bg"></div>
+        	<span class="modal-close" id="map-modal-close">&times;</span>
+		<div class="modal-content" id="map-modal-div">
+			<iframe id="mapBackground" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2597.9638238485154!2d-123.10102768413297!3d49.37175747237576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54866f851af112d7%3A0xc4e64d7162e0ecb7!2sGrouse%20Mountain%20%40%20Skyride!5e0!3m2!1sen!2sca!4v1635393658091!5m2!1sen!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+        	<div id="mapCaption"></div>
+	</div>
         <div id="map-content-wrapper" class="container pointer-events-none">
             <div class="row">
                 <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
@@ -505,6 +515,44 @@
         ga('create', 'UA-60348896-3', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <!-- Map modal hotbox -->
+    <script>
+        var modal = document.getElementById("mapModal")
+        var mapBackground = document.getElementById("mapBackground")
+        var modalImg = document.getElementById("map-modal-div")
+        var captionText = document.getElementById("mapCaption")
+        var modalBG = document.getElementById("map-modal-bg")
+
+        mapBackground.onclick = function() {
+            modal.style.display = "block";
+            style = this.currentStyle || window.getComputedStyle(this, false),
+            captionText.innerHTML = "";
+
+            var scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+            var body = document.body;
+            body.style.position = 'fixed';
+            body.style.top = `-${scrollY}`;
+        }
+
+       var span = document.getElementById("map-modal-close")
+        span.onclick = function() {
+            modal.style.display = "none";
+
+            var body = document.body;
+            var scrollY = body.style.top;
+            body.style.position = '';
+            body.style.top = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
+
+        modalBG.onclick = span.onclick;
+
+        window.addEventListener('scroll', function() {
+            document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+        })
+    </script>
+
     <!-- Progressive Web App -->
     <script>
         if ("serviceWorker" in navigator) {
