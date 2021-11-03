@@ -220,6 +220,11 @@ $(document).ready(function () {
         //     && MD5($('#invite_code').val()) !== 'c6e63ad45b4a45a081dbaae07d4b0d0b') {
         //     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         // } else {
+            $.ajaxSetup({
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8'
+                }
+            });
             $.post('https://script.google.com/macros/s/AKfycbzr9Xv0Dv35gNqWrVS9FyRObUZ_ItVbN_V8pTQ-4ggBC12_-oEEc1GN_xtB82OI_orABw/exec', data)
                 .done(function (data) {
                     console.log(data);
