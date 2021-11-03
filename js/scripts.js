@@ -1,5 +1,25 @@
 $(document).ready(function () {
 
+
+    /***************** Helpers ******************/
+    $.fn.extend({
+        // gets the selected range in the first text area found
+        // returns hash of { start, end }
+        getSelectedRange: function() {
+            var el = this.get(0),
+                start = 0,
+                end = 0;
+            if (el.selectionStart) {
+                start = el.selectionStart;
+                end = el.selectionEnd;
+            }
+            return {
+                start: start,
+                end: end
+            }
+        }
+    });
+
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -136,31 +156,6 @@ $(document).ready(function () {
 
     });
 
-    /********************** Social Share buttons ***********************/
-    var share_bar = document.getElementsByClassName('share-bar');
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-
-    for (var i = 0; i < share_bar.length; i++) {
-        var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=WeeBoo&amp;hashtags=LaurentAndGiulia&amp;count=horizontal"' +
-            'style="width:105px; height:21px;">' +
-            '</iframe>' +
-
-            '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=387405285345104&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>';
-
-            //'<div class="g-plusone" data-size="medium"></div>';
-
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
-
-        share_bar[i].innerHTML = html;
-        share_bar[i].style.display = 'inline-block';
-    }
-
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
 
@@ -185,20 +180,20 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Laurent and Giulia's Wedding",
+            title: "Kirsten and Alex' Wedding",
 
             // Event start date
-            start: new Date('Jul 19, 2019 16:00'),
+            start: new Date('Oct 1, 2022 16:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Jul 20, 2019 04:00'),
+            end: new Date('Oct 2, 2022 00:30'),
 
             // Event Address
-            address: 'Via XXIV Maggio, 1, 15026 Oviglio AL, Italie',
+            address: 'The Timber Room Grouse Mountain Lodge, North Vancouver, BC V7R 4K9',
 
             // Event Description
             description: "We can't wait to spend this day with you. For any questions or issues don't hesitate to contact us."
@@ -207,6 +202,28 @@ $(document).ready(function () {
 
     $('#add-to-cal').html(myCalendar);
 
+    /********************** Fancy TextArea **********************/
+    var textarea_class = '.centered-texbox';
+    var txtheight = parseInt($(textarea_class).eq(0).css('height'));
+    $(textarea_class).css('line-height', (txtheight*6.5)+'%' );
+    $(textarea_class).keydown(function(e){
+      if( e.keyCode != 8 )
+      {
+        console.log("Add class active");
+        $(this).addClass('active');
+      }
+      else
+      {
+        var startrange = $(this).getSelectedRange()["start"];
+        var endrange = $(this).getSelectedRange()["end"];
+        if( $(this).val().length <= 1 || (startrange == 0 && endrange == 0) )
+        {
+            console.log("Remove class active");
+            $(this).removeClass('active');
+            $(this).css('line-height', (parseInt($(this).eq(0).css('height'))*6.5)+'%' );
+        }
+      }
+    });
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
@@ -215,17 +232,12 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        // if (MD5($('#invite_code').val()) !== '364274707420480fa0e30abb8397ac68'
-        //     && MD5($('#invite_code').val()) !== '50c25416cd81e22ea32960a8b83b3455'
-        //     && MD5($('#invite_code').val()) !== 'c6e63ad45b4a45a081dbaae07d4b0d0b') {
-        //     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        // } else {
-            $.ajaxSetup({
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8'
-                }
-            });
-            $.post('https://script.google.com/macros/s/AKfycbzr9Xv0Dv35gNqWrVS9FyRObUZ_ItVbN_V8pTQ-4ggBC12_-oEEc1GN_xtB82OI_orABw/exec', data)
+            console.log(data);
+
+            $.post(
+                'https://script.google.com/macros/s/AKfycbzISzFzSqLNQBevmhCSS1qFM_SnvWYLb4J_au9otg/exec',
+                data
+                )
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {

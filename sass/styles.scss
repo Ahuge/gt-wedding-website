@@ -1007,8 +1007,49 @@ RSVP form
       input:-ms-input-placeholder {
         color: $form-placeholder;
       }
+      textarea {
+        padding-top: 68px;
+        padding-left: 68px;
+        width: 100%;
+        height: 100%;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        border: none;
+        //resize: none;
+      }
+      textarea::-webkit-input-placeholder {
+        color: $form-placeholder;
+        text-align: center;
+      }
+      textarea:-moz-placeholder {
+        color: $form-placeholder;
+        text-align: center;
+      }
+      textarea::-moz-placeholder {
+        color: $form-placeholder;
+        text-align: center;
+      }
+      textarea:-ms-input-placeholder {
+        color: $form-placeholder;
+        text-align: center;
+      }
     }
   }
+}
+.centered-texbox {
+
+}
+.centered-texbox.active{
+  line-height: 16px !important;
+  padding-top: 24px !important;
+}
+
+.placeholder-span {
+  position: absolute;
+  color: $form-placeholder;
+  font-weight: bold;
+  overflow: hidden;
 }
 
 /* ==========================================================================
