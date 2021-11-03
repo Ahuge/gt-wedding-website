@@ -116,7 +116,7 @@
         <section class="navigation">
             <header>
                 <div class="header-content">
-                    <div class="logo"><a href="#"><img src="img/logo.png" class="pulse2" alt="Logo"></a></div>
+                        <div class="logo"><a href="#"><div class="pulse2" style="font-family: 'Dancing Script', cursive;">K &amp; A</div></a></div>
                     <div class="header-nav">
                         <nav>
                             <ul class="primary-nav">
@@ -385,85 +385,78 @@
             </div>
         </div>
     </section>
+<section class="rsvp text-center" id="rsvp">
 
-    <section class="rsvp text-center" id="rsvp">
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-        <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>×</span>
-                        </button>
-                        <div class="section-padding">
-                            <h3 data-translatable="">Thank you!</h3>
-                            <p data-translatable="">
-                                <span>We are glad to see you join us on our big day.</span>
-                            </p>
-                            <div id="add-to-cal"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>What are you waiting for?</h3>
+                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="Your email"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
+                            </div>
                         </div>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3>RSVP</h3>
-                    <p data-translatable="">
-                        <span>We would greatly appreciate if you could RSVP before the <strong>1<sup>st</sup> of
-                                June</strong> 2019</span>
-                        <span>Merci de nous faire parvenir votre réponse avant le <strong>1<sup>er</sup> Juin</strong>
-                            2019</span>
-                        <span>Vi saremmo grati se poteste rispondere entro il <strong>1 Giugno</strong> 2019</span>
-                    </p>
-                    <form id="rsvp-form" class="rsvp-form" action="" method="POST">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="email" class="" placeholder="Your email" required="">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name" class="" placeholder="Your name" required="">
-                                </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Husband/Wife or kids"
+                                                                  required>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0" max="8" placeholder="Husband/Femme or bambini" required="">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-fish"></i><input name="allergy" class="" placeholder="Allergy">
-                                </div>
-                            </div>
-                            <!-- <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                                                 class="" min="0"
                                                                 placeholder="Invite code"
                                                                 required>
                             </div>
-                        </div> -->
                         </div>
-                        <div class="row">
-                            <div class="col-md-12" id="alert-wrapper"></div>
-                        </div>
-                        <button class="btn-fill rsvp-btn" data-translatable="">
-                            <span>Yes, that's me!</span>
-                            <span>Oui, c'est moi !</span>
-                            <span>Si, sono io !</span>
-                        </button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Yes,
+                        that's me!
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <footer>
         <div class="container">
             <div class="row">

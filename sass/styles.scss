@@ -261,13 +261,13 @@ Animations
 ========================================================================== */
 .pulse2 {
   animation-name: pulse2;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 @keyframes pulse2 {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
   50% {
     transform: scale(0.8);
@@ -405,7 +405,7 @@ Hero
 .hero {
   min-height: 750px;
   /*background: url('../img/hero-min.jpg') center center;*/
-  background: url('../img/hero.jpeg') center center;
+  background: url('../img/hero.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -152,7 +152,7 @@ $(document).ready(function () {
             '</iframe>' +
 
             '<iframe src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(window.location) + '&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=387405285345104&amp;width=150" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>';
-           
+
             //'<div class="g-plusone" data-size="medium"></div>';
 
         // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
@@ -220,7 +220,7 @@ $(document).ready(function () {
         //     && MD5($('#invite_code').val()) !== 'c6e63ad45b4a45a081dbaae07d4b0d0b') {
         //     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         // } else {
-            $.post('https://script.google.com/macros/s/AKfycbzAZaJUBMU_5x22JiJdbfSc0SiIRcYQYp1XXn-BOcqAgOCN6n2e/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzr9Xv0Dv35gNqWrVS9FyRObUZ_ItVbN_V8pTQ-4ggBC12_-oEEc1GN_xtB82OI_orABw/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
