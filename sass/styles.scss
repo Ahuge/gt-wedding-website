@@ -85,16 +85,32 @@ section .header {
 
 .title-text {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 7em;
   color: #ffffff;
 }
 
 .title-text-dark {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 7em;
   color: $txt-primary;
+}
+
+.subtitle-text {
+  // font-family: 'Shadows Into Light Two', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.subtitle-text-dark {
+  // font-family: 'Shadows Into Light Two', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-size: 4em;
+  color: $txt-primary;
+  line-height: 1;
 }
 
 .tooltip {
@@ -484,7 +500,7 @@ header {
 
     li {
       display: inline;
-      font-weight: bold;
+      //font-weight: bold;
 
       a {
         color: $txt-light;
@@ -721,9 +737,8 @@ Features-stack
   }
 
   .time {
-    font-size: 13px;
+    font-size: 16px;
     font-style: italic;
-    text-transform: lowercase;
     color: $txt-primary;
   }
 }
@@ -984,7 +999,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, .fa-fish {
+      i.fa-user, i.fa-users, i.fa-comments, i.fa-envelope, .fa-key, .fa-fish {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -1021,23 +1036,23 @@ RSVP form
         -webkit-border-radius: 6px;
         border-radius: 6px;
         border: none;
-        //resize: none;
+        resize: none;
       }
       textarea::-webkit-input-placeholder {
         color: $form-placeholder;
-        text-align: center;
+        //text-align: center;
       }
       textarea:-moz-placeholder {
         color: $form-placeholder;
-        text-align: center;
+        //text-align: center;
       }
       textarea::-moz-placeholder {
         color: $form-placeholder;
-        text-align: center;
+        //text-align: center;
       }
       textarea:-ms-input-placeholder {
         color: $form-placeholder;
-        text-align: center;
+        //text-align: center;
       }
     }
   }
@@ -1046,8 +1061,8 @@ RSVP form
 
 }
 .centered-texbox.active{
-  line-height: 16px !important;
-  padding-top: 24px !important;
+  line-height: 14px !important;
+  padding-top: 20px !important;
 }
 
 .placeholder-span {

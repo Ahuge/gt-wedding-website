@@ -205,7 +205,7 @@ $(document).ready(function () {
     /********************** Fancy TextArea **********************/
     var textarea_class = '.centered-texbox';
     var txtheight = parseInt($(textarea_class).eq(0).css('height'));
-    $(textarea_class).css('line-height', (txtheight*6.5)+'%' );
+    $(textarea_class).css('line-height', (txtheight*7)+'%' );
     $(textarea_class).keydown(function(e){
       if( e.keyCode != 8 )
       {
@@ -220,7 +220,7 @@ $(document).ready(function () {
         {
             console.log("Remove class active");
             $(this).removeClass('active');
-            $(this).css('line-height', (parseInt($(this).eq(0).css('height'))*6.5)+'%' );
+            $(this).css('line-height', (parseInt($(this).eq(0).css('height'))*7)+'%' );
         }
       }
     });
