@@ -2,7 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 // Imports
 //@import "compass";
 @import "partials/typography";
@@ -57,6 +59,9 @@ body {
   color: $txt-primary;
   -webkit-text-size-adjust: 100%;
   //fix for iOS
+}
+.primary-nav {
+  font-family: 'Annie Use Your Telescope', cursive;
 }
 *:focus {
   outline: none !important;
