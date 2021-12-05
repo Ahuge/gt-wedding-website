@@ -235,7 +235,7 @@ $(document).ready(function () {
             console.log(data);
 
             $.post(
-                'https://script.google.com/macros/s/AKfycbzISzFzSqLNQBevmhCSS1qFM_SnvWYLb4J_au9otg/exec',
+		'https://script.google.com/macros/s/AKfycbx4jDo9gsBfAi4Y1-QOLdnFBeeYG4U0A-FsG2jEgY0Fl8PZa_racJAT9pvWvcx_sk-Y/exec',
                 data
                 )
                 .done(function (data) {
