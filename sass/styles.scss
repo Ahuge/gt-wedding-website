@@ -3,8 +3,9 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
 // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 // Imports
 //@import "compass";
 @import "partials/typography";
@@ -61,7 +62,7 @@ body {
   //fix for iOS
 }
 .primary-nav {
-  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Comic Neue', cursive;
 }
 *:focus {
   outline: none !important;
@@ -107,7 +108,7 @@ section .header {
 
 .subtitle-text-dark {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 4em;
   color: $txt-primary;
   line-height: 1;
