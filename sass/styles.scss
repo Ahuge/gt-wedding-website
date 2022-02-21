@@ -5,7 +5,9 @@
 // @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Permanent+Marker&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 // Imports
 //@import "compass";
 @import "partials/typography";
@@ -62,7 +64,7 @@ body {
   //fix for iOS
 }
 .primary-nav {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Prata', serif;
 }
 *:focus {
   outline: none !important;
