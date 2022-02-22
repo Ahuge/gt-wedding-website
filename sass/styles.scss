@@ -88,29 +88,33 @@ section .header {
 
 .title-text {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Prata', serif;
+  // font-family: 'Comic Neue', cursive;
   font-size: 7em;
   color: #ffffff;
 }
 
 .title-text-dark {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Prata', serif;
+  // font-family: 'Comic Neue', cursive;
   font-size: 7em;
   color: $txt-primary;
 }
 
 .subtitle-text {
   // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Prata', serif;
+  // font-family: 'Comic Neue', cursive;
   font-size: 4em;
   color: #ffffff;
   line-height: 1;
 }
 
 .subtitle-text-dark {
-  // font-family: 'Shadows Into Light Two', cursive;
-  font-family: 'Comic Neue', cursive;
+  // font-family: 'Shadows Into Light Two', cursive;  font-family: 'Prata', serif;
+  font-family: 'Prata', serif;
+  // font-family: 'Comic Neue', cursive;
   font-size: 4em;
   color: $txt-primary;
   line-height: 1;
