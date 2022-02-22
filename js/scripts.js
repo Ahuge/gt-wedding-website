@@ -180,20 +180,20 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Kirsten and Alex' Wedding",
+            title: "Timofey and Gabrielle's Wedding",
 
             // Event start date
-            start: new Date('Oct 1, 2022 16:00'),
+            start: new Date('June 11, 2022 15:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Oct 2, 2022 00:30'),
+            end: new Date('June 12, 2022 00:30'),
 
             // Event Address
-            address: 'The Timber Room Grouse Mountain Lodge, North Vancouver, BC V7R 4K9',
+            address: 'The Fire Pit and Lodge, Camp Capilano, North Vancouver, BC V7R 4L2',
 
             // Event Description
             description: "We can't wait to spend this day with you. For any questions or issues don't hesitate to contact us."
